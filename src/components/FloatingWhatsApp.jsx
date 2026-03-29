@@ -1,25 +1,31 @@
+import React from 'react';
+import { MessageCircle } from 'lucide-react';
+import { motion } from 'framer-motion';
+
 function FloatingWhatsApp() {
-  const whatsappUrl = "https://api.whatsapp.com/send?phone=5519981286842";
+  const phoneNumber = '5519981286842';
+  const message = 'Olá, vim pelo site e gostaria de falar com o advogado.';
+  const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
 
   return (
-    <div className="fixed bottom-6 right-6 z-50">
+    <motion.div
+      initial={{ opacity: 0, scale: 0.8 }}
+      animate={{ opacity: 1, scale: 1 }}
+      transition={{ duration: 0.3, delay: 1 }}
+      className="fixed bottom-6 right-6 z-50"
+    >
       <a
         href={whatsappUrl}
         target="_blank"
         rel="noopener noreferrer"
-        style={{
-          backgroundColor: "#25D366",
-          width: "60px",
-          height: "60px",
-          borderRadius: "50%",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          boxShadow: "0 4px 10px rgba(0,0,0,0.2)"
-        }}
+        aria-label="Entrar em contato pelo WhatsApp"
+        className="flex items-center justify-center h-14 w-14 rounded-full shadow-lg"
+        style={{ backgroundColor: '#25D366' }}
       >
-        <MessageCircle size={28} color="#fff" />
+        <MessageCircle className="h-6 w-6 text-white" />
       </a>
-    </div>
+    </motion.div>
   );
 }
+
+export default FloatingWhatsApp;
