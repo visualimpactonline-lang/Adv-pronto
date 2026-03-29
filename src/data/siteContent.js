@@ -1,6 +1,6 @@
 export const officeInfo = {
-  lawyerName: 'Luis Fernando Silveira Luvizotto',
-  shortName: 'Luis Fernando Silveira Luvizotto',
+  lawyerName: 'Fernando Luvizotto',
+  shortName: 'Fernando Luvizotto',
   oab: 'OAB/SP 399821',
   city: 'Piracicaba/SP',
   whatsappNumber: '5511999999999',
