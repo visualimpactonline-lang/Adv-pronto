@@ -3,7 +3,7 @@ import { MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
 
-function FloatingWhatsApp({ phoneNumber = '5511999999999' }) {
+function FloatingWhatsApp({ phoneNumber = '5519981286842' }) {
   const whatsappUrl = `https://wa.me/${phoneNumber}`;
 
   return (
