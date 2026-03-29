@@ -3,9 +3,10 @@ import { MessageCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { motion } from 'framer-motion';
 
-function FloatingWhatsApp({ phoneNumber = '5519981286842' }) {
-  const message = "Olá, vim pelo site e gostaria de falar com o advogado.";
-  const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
+function FloatingWhatsApp() {
+  const phoneNumber = '5519981286842';
+  const message = 'Olá, vim pelo site e gostaria de falar com o advogado.';
+  const whatsappUrl = `https://api.whatsapp.com/send?phone=${phoneNumber}&text=${encodeURIComponent(message)}`;
 
   return (
     <motion.div
